@@ -1,0 +1,153 @@
+.cat-button{
+  display: inline-block;
+  line-height: 1;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  outline: none;
+  opacity: 0.8;
+}
+.cat-button.mini{
+  padding: 7px 15px;
+}
+.cat-button.mini .catfont{
+  font-size: 12px;
+}
+.cat-button.small{
+  padding: 9px 15px;
+}
+.cat-button.small .catfont{
+  font-size: 12px;
+}
+.cat-button.medium{
+  padding: 10px 20px;
+}
+.cat-button.disabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.cat-button:active{
+  border-style: solid;
+  opacity: 1;
+}
+.cat-button.disabled:active{
+  border-style: solid;
+  opacity: 0.5;
+}
+.cat-button.round{
+  border-radius: 20px;
+}
+.cat-button.circle{
+  border-radius: 50%;
+  padding: 12px;
+}
+.cat-button:hover{
+  color: #409eff;
+  border-color: #c6e2ff;
+  background-color: #ecf5ff;
+}
+.cat-button.disabled:hover{
+  color: #c8c9cc;
+  background-color: #fff;
+  border-color: #c8c9cc;
+}
+.cat-button-primary{
+  color: #409eff;
+  background: #ecf5ff;
+  border-color: #b3d8ff;
+}
+.cat-button-primary.fill{
+  color: #fff;
+  background: #409eff;
+  background-color: #409eff;
+}
+.cat-button-primary:hover{
+  color: #fff;
+  background: #409eff;
+  background-color: #409eff;
+}
+.cat-button.disabled.cat-button-primary:hover{
+  color: #409eff;
+  background: #ecf5ff;
+  border-color: #b3d8ff;
+}
+.cat-button-success{
+  color: #67c23a;
+  background: #f0f9eb;
+  border-color: #c2e7b0;
+}
+.cat-button-success.fill{
+  color: #fff;
+  background: #67c23a;
+  background-color: #67c23a;
+}
+.cat-button-success:hover{
+  color: #fff;
+  background: #67c23a;
+  background-color: #67c23a;
+}
+.cat-button.disabled.cat-button-success:hover{
+  color: #67c23a;
+  background: #f0f9eb;
+  border-color: #c2e7b0;
+}
+.cat-button-info{
+  color: #909399;
+  background: #f4f4f5;
+  border-color: #d3d4d6;
+}
+.cat-button-info.fill{
+  color: #fff;
+  background: #909399;
+  background-color: #909399;
+}
+.cat-button-info:hover{
+  color: #fff;
+  background: #909399;
+  background-color: #909399;
+}
+.cat-button.disabled.cat-button-info:hover{
+  color: #909399;
+  background: #f4f4f5;
+  border-color: #d3d4d6;
+}
+.cat-button-warning{
+  color: #e6a23c;
+  background: #fdf6ec;
+  border-color: #f5dab1;
+}
+.cat-button-warning.fill{
+  color: #fff;
+  background: #e6a23c;
+  background-color: #e6a23c;
+}
+.cat-button-warning:hover{
+  color: #fff;
+  background: #e6a23c;
+  background-color: #e6a23c;
+}
+.cat-button.disabled.cat-button-warning:hover{
+  color: #e6a23c;
+  background: #fdf6ec;
+  border-color: #f5dab1;
+}
+.cat-button-danger{
+  color: #f56c6c;
+  background: #fef0f0;
+  border-color: #fbc4c4;
+}
+.cat-button-danger.fill{
+  color: #fff;
+  background: #f56c6c;
+  background-color: #f56c6c;
+}
+.cat-button-danger:hover{
+  color: #fff;
+  background: #f56c6c;
+  background-color: #f56c6c;
+}
+.cat-button.disabled.cat-button-danger:hover{
+  color: #f56c6c;
+  background: #fef0f0;
+  border-color: #fbc4c4;
+}

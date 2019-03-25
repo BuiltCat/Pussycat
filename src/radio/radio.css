@@ -1,0 +1,16 @@
+.cat-radio input{
+    vertical-align: middle;
+
+}
+.cat-radio input:checked ~ span{
+    color: #409eff;
+}
+.cat-radio span{
+    height: 100%;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+.cat-radio.disabled{
+    cursor: not-allowed;
+    color: #999;
+}

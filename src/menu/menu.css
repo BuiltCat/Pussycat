@@ -1,0 +1,59 @@
+.cat-menus.horizontal{
+    height: 56px;
+    line-height: 56px;
+    border-bottom: 5px solid transparent;
+    font-weight: 400;
+    font-size: 14px;
+}
+.cat-menus.horizontal>li{
+    display: inline-block;
+    padding: 0 20px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+.cat-menus.horizontal>li:hover{
+    transition: 0.2s;
+    border-bottom: 5px solid #43a1f8;
+}
+.cat-menus.horizontal>li:hover .cat-submenu{
+    display: block;
+}
+.cat-menus.horizontal>li:hover .catfont{
+    display: inline-block;
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+.cat-menus.default{
+    background-color: #eef1f6;
+    color: #48576a;
+}
+.cat-menus.dark{
+    background-color: #324157;
+    color: #bfcbd9;
+}
+.cat-menus li.active{
+    color: #43a1f8;
+}
+.cat-menus .cat-submenu{
+    display: none;
+    position: absolute;
+    list-style: none;
+    border: 1px solid #d1dbe5;
+    padding: 5px 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+    background: #fff;
+    min-width: 200px;
+    top: 65px;
+    left: 0;
+    color: #324157;
+}
+.cat-menus .cat-submenu>li{
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px;
+    text-align: left;
+}
+.cat-menus .cat-submenu>li:hover{
+    background:#d2dbe4;
+}

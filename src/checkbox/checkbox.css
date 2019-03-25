@@ -1,0 +1,7 @@
+.cat-checkbox input{
+    vertical-align: middle;
+}
+.cat-checkbox span{
+    vertical-align: middle;
+    height: 100%;
+}
