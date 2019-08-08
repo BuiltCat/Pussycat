@@ -9,6 +9,10 @@ module.exports = {
         path: path.resolve(__dirname, '../dist'),
         libraryTarget: 'commonjs2'
     },
+    devtool: "source-map",
+    resolve: {
+        extensions: [".ts", ".tsx",'.js']
+    },
     module: {
         rules: [
             {
@@ -25,6 +29,20 @@ module.exports = {
                 use: [
                     'file-loader'
                 ]
+            },
+            {
+                test: /\.ts(x?)$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "ts-loader"
+                    }
+                ]
+            },
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader"
             }
         ]
     },
