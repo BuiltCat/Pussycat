@@ -2,24 +2,24 @@ import * as React from "react"
 import "./button.css"
 
 export interface ButtonProps {
-    type?: string;
-    size?: string;
-    fill?: boolean;
-    disabled?: boolean;
-    round?: boolean;
-    circle?: boolean;
-    icon?: string;
-    onClick?:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    type?: string
+    size?: string
+    fill?: boolean
+    disabled?: boolean
+    round?: boolean
+    circle?: boolean
+    icon?: string
+    onClick?:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 interface ButtonState {
-    type: string;
-    size: string;
-    fill: string;
-    disabled: boolean;
-    round: string;
-    circle: string;
-    icon: string;
-    onClick:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    type: string
+    size: string
+    fill: string
+    disabled: boolean
+    round: string
+    circle: string
+    icon: string
+    onClick:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 export class Button extends React.Component<ButtonProps, ButtonState>{

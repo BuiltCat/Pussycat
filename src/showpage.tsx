@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom"
 
 // import { Button, Radio, RadioGroup, CheckBox, Menu, MenuItem, SubMenu } from "."
 import { Button } from "./button"
-import { Radio } from "./radio"
+import { Radio,RadioGroup } from "./radio"
 import "./font/iconfont.css"
 import "./index.css"
 
@@ -12,6 +12,9 @@ const fn = function () {
 }
 interface TestState{
     value: string;
+}
+interface TestState1{
+    value: number;
 }
 interface TestProps{
 
@@ -23,10 +26,9 @@ class Test extends React.Component<TestProps,TestState> {
             value: "1"
         }
     }
-    onChange = (e:any) => {
-        console.log('radio1 checked', e.target.value);
+    onChange = (e: string) => {
         this.setState({
-          value: e.target.value,
+          value: e,
         });
       };
     render() {
@@ -38,27 +40,28 @@ class Test extends React.Component<TestProps,TestState> {
         )
     }
 }
-// class Test2 extends React.Component<object,object> {
-//     constructor() {
-//         super();
-//         this.state = {
-//             value: 3
-//         }
-//     }
-//     onChange(value) {
-//         this.setState({ value });
-//     }
-//     render() {
-//         return (
-//             <RadioGroup value={this.state.value} onChange={this.onChange.bind(this)}>
-//                 <Radio value="3">备选项</Radio>
-//                 <Radio value="6">备选项</Radio>
-//                 <Radio value="9">备选项</Radio>
-//             </RadioGroup>
-//         )
-//     }
+class Test2 extends React.Component<TestProps,TestState1> {
+    constructor(props: TestProps) {
+        super(props);
+        this.state = {
+            value: 3
+        }
+    }
+    onChange(value: number) {
+        this.setState({ value:value });
+    }
+    render() {
+        { console.log(this.state.value)}
+        return (
+            <RadioGroup value={this.state.value} onChange={this.onChange.bind(this)}>
+                <Radio value={3}>备选项</Radio>
+                <Radio value={6}>备选项</Radio>
+                <Radio value={9}>备选项</Radio>
+            </RadioGroup>
+        )
+    }
 
-// }
+}
 // class Test3 extends React.Component {
 //     render() {
 //         return (
@@ -170,13 +173,13 @@ ReactDOM.render(
         <div>
             <h2>禁用状态</h2>
             <form>
-                {/* <Radio disabled value={1}>中国</Radio> */}
-                {/* <Radio disabled value={2}>美国</Radio> */}
+                <Radio disabled value={1}>中国</Radio>
+                <Radio disabled value={2}>美国</Radio>
             </form>
         </div>
         <div>
             <h2>单选框组</h2>
-            {/* <Test2></Test2> */}
+            <Test2></Test2>
         </div>
         <div>
             <h2>复选框</h2>
