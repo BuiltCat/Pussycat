@@ -1,15 +1,42 @@
-import React from "react";
-import "./menu.css";
+import * as React from "react"
+import "./menu.css"
 
-class Menu extends React.Component{
-    constructor(props) {
+interface MenuProps{
+    // 主题
+    theme?: string
+    defaultActive: string
+    mode: string
+    onSelect?: ()=> void
+    children: any
+}
+interface MenuState{
+    defaultActive: string
+    theme: string
+}
+interface SubMenuProps{
+    index: string
+    title: string
+    children: any
+    checked?: string
+    defaultActive?: any
+    onClick?: any
+    onSelect?: any
+}
+interface MenuItemProps{
+    onClick?: any
+    index: string
+    onSelect?: any
+    checked?: any
+}
+class Menu extends React.Component<MenuProps, MenuState>{
+    constructor(props: MenuProps) {
         super(props);
         this.state = {
             theme: this.props.theme ? this.props.theme : 'default',
             defaultActive: this.props.defaultActive
         }
     }
-    onClick(defaultActive) {
+    onClick(defaultActive: string) {
         this.setState({ defaultActive })
     }
     renderChildren() {
@@ -17,7 +44,7 @@ class Menu extends React.Component{
             if (child.type === SubMenu) {
                 return React.cloneElement(child, {
                     ...child.props,
-                    checked: this.state.defaultActive === child.props.index,
+                    checked: this.state.defaultActive.slice(0,1) === child.props.index,
                     defaultActive: this.state.defaultActive,
                     onClick: this.onClick.bind(this),
                     onSelect:this.props.onSelect
@@ -39,7 +66,7 @@ class Menu extends React.Component{
         )
     }
 }
-class SubMenu extends React.Component{
+class SubMenu extends React.Component<SubMenuProps>{
      renderChildren() {
          return React.Children.map(this.props.children, child => {
             return React.cloneElement(child, {
@@ -52,7 +79,7 @@ class SubMenu extends React.Component{
     }
     render() {
         return (
-            <li>
+            <li  className={this.props.checked ? 'active' : ''}>
                 <div>
                     {this.props.title}
                     <span className={"catfont cat-down"}></span>
@@ -65,7 +92,7 @@ class SubMenu extends React.Component{
     }
 
 }
-class MenuItem extends React.Component{
+class MenuItem extends React.Component<MenuItemProps>{
     changeDefault() {
         if (this.props.onClick) {
             this.props.onClick(this.props.index)

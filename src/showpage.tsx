@@ -4,6 +4,7 @@ import * as ReactDOM from "react-dom"
 // import { Button, Radio, RadioGroup, CheckBox, Menu, MenuItem, SubMenu } from "."
 import { Button } from "./button"
 import { Radio,RadioGroup } from "./radio"
+import { Menu, SubMenu,MenuItem } from "./menu"
 import "./font/iconfont.css"
 import "./index.css"
 
@@ -51,7 +52,6 @@ class Test2 extends React.Component<TestProps,TestState1> {
         this.setState({ value:value });
     }
     render() {
-        { console.log(this.state.value)}
         return (
             <RadioGroup value={this.state.value} onChange={this.onChange.bind(this)}>
                 <Radio value={3}>备选项</Radio>
@@ -62,42 +62,42 @@ class Test2 extends React.Component<TestProps,TestState1> {
     }
 
 }
-// class Test3 extends React.Component {
-//     render() {
-//         return (
-//             <Menu theme="dark" defaultActive="1" mode="horizontal" onSelect={this.onSelect.bind(this)}>
-//                 <MenuItem index="1">处理中心</MenuItem>
-//                 <SubMenu index="2" title="我的工作台">
-//                     <MenuItem index="2-1">选项1</MenuItem>
-//                     <MenuItem index="2-2">选项2</MenuItem>
-//                     <MenuItem index="2-3">选项3</MenuItem>
-//                 </SubMenu> 
-//                 <MenuItem index="3">订单管理</MenuItem>
-//             </Menu>
-//         )
-//     }
-//     onSelect(i){
-//         console.log(i)
-//     }
-// }
-// class Test4 extends React.Component {
-//     render() {
-//         return (
-//             <Menu defaultActive="1" mode="horizontal" onSelect={this.onSelect}>
-//                 <MenuItem index="1">处理中心</MenuItem>
-//                 <SubMenu index="2" title="我的工作台">
-//                     <MenuItem index="2-1">选项1</MenuItem>
-//                     <MenuItem index="2-2">选项2</MenuItem>
-//                     <MenuItem index="2-3">选项3</MenuItem>
-//                 </SubMenu>
-//                 <MenuItem index="3">订单管理</MenuItem>
-//             </Menu>
-//         )
-//     }
-//     onSelect(i){
-//         console.log(i)
-//     }
-// }
+class Test3 extends React.Component {
+    render() {
+        return (
+            <Menu theme="dark" defaultActive="1" mode="horizontal" onSelect={this.onSelect.bind(this)} >
+                <MenuItem index="1">处理中心</MenuItem>
+                <SubMenu index="2" title="我的工作台">
+                    <MenuItem index="2-1">选项1</MenuItem>
+                    <MenuItem index="2-2">选项2</MenuItem>
+                    <MenuItem index="2-3">选项3</MenuItem>
+                </SubMenu> 
+                <MenuItem index="3">订单管理</MenuItem>
+            </Menu>
+        )
+    }
+    onSelect(index: string){
+        console.log(index)
+    }
+}
+class Test4 extends React.Component {
+    render() {
+        return (
+            <Menu defaultActive="1" mode="horizontal" onSelect={this.onSelect.bind(this)}>
+                <MenuItem index="1">处理中心</MenuItem>
+                <SubMenu index="2" title="我的工作台">
+                    <MenuItem index="2-1">选项1</MenuItem>
+                    <MenuItem index="2-2">选项2</MenuItem>
+                    <MenuItem index="2-3">选项3</MenuItem>
+                </SubMenu>
+                <MenuItem index="3">订单管理</MenuItem>
+            </Menu>
+        )
+    }
+    onSelect(index: string){
+        console.log(index)
+    }
+}
 
 ReactDOM.render(
     <div>
@@ -189,7 +189,7 @@ ReactDOM.render(
         </div>
         <div>
             <h1>黑色顶栏</h1>
-            {/* <Test3></Test3> */}
+            <Test3></Test3>
             <div className="line"></div>
             <br></br>
             <br></br>
@@ -198,7 +198,7 @@ ReactDOM.render(
             <br></br>
             <br></br>
             <h1>默认顶栏</h1>
-            {/* <Test4></Test4> */}
+            <Test4></Test4>
             <br></br>
             <br></br>
             <br></br>
