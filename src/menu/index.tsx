@@ -60,7 +60,7 @@ class Menu extends React.Component<MenuProps, MenuState>{
     }
     render() {
         return (
-            <ul className={`cat-menus horizontal ${this.state.theme}`}>
+            <ul className={`cat-menus ${this.props.mode} ${this.state.theme}`}>
                 {this.renderChildren()}
             </ul>
         )

@@ -5,6 +5,7 @@ import * as ReactDOM from "react-dom"
 import { Button } from "./button"
 import { Radio,RadioGroup } from "./radio"
 import { Menu, SubMenu,MenuItem } from "./menu"
+import  { Table }  from "./table"
 import "./font/iconfont.css"
 import "./index.css"
 
@@ -16,6 +17,14 @@ interface TestState{
 }
 interface TestState1{
     value: number;
+}
+interface TestState6{ 
+    columns: Array<{
+        label: string
+        prop: string
+        width?: number
+    }>
+    data:  Array<Object>
 }
 interface TestProps{
 
@@ -96,6 +105,91 @@ class Test4 extends React.Component {
     }
     onSelect(index: string){
         console.log(index)
+    }
+}
+class Test5 extends React.Component {
+    render() {
+        return (
+            <Menu defaultActive="1" mode="vertical" onSelect={this.onSelect.bind(this)}>
+                <MenuItem index="1">处理中心</MenuItem>
+                <SubMenu index="2" title="我的工作台">
+                    <MenuItem index="2-1">选项1</MenuItem>
+                    <MenuItem index="2-2">选项2</MenuItem>
+                    <MenuItem index="2-3">选项3</MenuItem>
+                </SubMenu>
+                <MenuItem index="3">订单管理</MenuItem>
+            </Menu>
+        )
+    }
+    onSelect(index: string){
+        console.log(index)
+    }
+}
+class Test6 extends React.Component<TestProps,TestState6> {
+    constructor(props: TestProps) {
+        super(props);
+      
+        this.state = {
+          columns: [
+            {
+              label: "日期",
+              prop: "date",
+              width: 180
+            },
+            {
+              label: "姓名",
+              prop: "name",
+              width: 180
+            },
+            {
+              label: "地址",
+              prop: "address"
+            }
+          ],
+          data: [{
+            date: '2016-05-02',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1518 弄'
+          }, {
+            date: '2016-05-04',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1517 弄'
+          }, {
+            date: '2016-05-01',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1519 弄'
+          }, {
+            date: '2016-05-03',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1516 弄'
+          },{
+            date: '2016-05-02',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1518 弄'
+          }, {
+            date: '2016-05-04',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1517 弄'
+          }, {
+            date: '2016-05-01',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1519 弄'
+          }, {
+            date: '2016-05-03',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1516 弄'
+          }]
+        }
+      }
+    render() {
+        return (
+            <Table
+            //   style={{width: '100%'}}
+              columns={this.state.columns}
+            //   maxHeight={200}
+              data={this.state.data}
+            />
+          )
     }
 }
 
@@ -205,6 +299,16 @@ ReactDOM.render(
             <br></br>
             <br></br>
             <br></br>
+            <h1>垂直顶栏</h1>
+            <Test5></Test5> 
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h1>表格</h1>
+            <Test6></Test6>
         </div>
     </div>
     , document.body
