@@ -192,7 +192,142 @@ class Test6 extends React.Component<TestProps,TestState6> {
           )
     }
 }
-
+class Test7 extends React.Component<TestProps,TestState6> {
+    constructor(props: TestProps) {
+        super(props);
+      
+        this.state = {
+          columns: [
+            {
+              label: "日期",
+              prop: "date",
+              width: 180
+            },
+            {
+              label: "姓名",
+              prop: "name",
+              width: 180
+            },
+            {
+              label: "地址",
+              prop: "address"
+            }
+          ],
+          data: [{
+            date: '2016-05-02',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1518 弄'
+          }, {
+            date: '2016-05-04',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1517 弄'
+          }, {
+            date: '2016-05-01',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1519 弄'
+          }, {
+            date: '2016-05-03',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1516 弄'
+          },{
+            date: '2016-05-02',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1518 弄'
+          }, {
+            date: '2016-05-04',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1517 弄'
+          }, {
+            date: '2016-05-01',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1519 弄'
+          }, {
+            date: '2016-05-03',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1516 弄'
+          }]
+        }
+      }
+    render() {
+        return (
+            <Table
+            //   style={{width: '100%'}}
+              columns={this.state.columns}
+            //   maxHeight={200}
+              data={this.state.data}
+              stripe={true}
+            />
+          )
+    }
+}
+class Test8 extends React.Component<TestProps,TestState6> {
+    constructor(props: TestProps) {
+        super(props);
+      
+        this.state = {
+          columns: [
+            {
+              label: "日期",
+              prop: "date",
+              width: 180
+            },
+            {
+              label: "姓名",
+              prop: "name",
+              width: 180
+            },
+            {
+              label: "地址",
+              prop: "address"
+            }
+          ],
+          data: [{
+            date: '2016-05-02',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1518 弄'
+          }, {
+            date: '2016-05-04',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1517 弄'
+          }, {
+            date: '2016-05-01',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1519 弄'
+          }, {
+            date: '2016-05-03',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1516 弄'
+          },{
+            date: '2016-05-02',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1518 弄'
+          }, {
+            date: '2016-05-04',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1517 弄'
+          }, {
+            date: '2016-05-01',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1519 弄'
+          }, {
+            date: '2016-05-03',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1516 弄'
+          }]
+        }
+      }
+    render() {
+        return (
+            <Table
+            //   style={{width: '100%'}}
+              columns={this.state.columns}
+            //   maxHeight={200}
+              data={this.state.data}
+              border={true}
+            />
+          )
+    }
+}
 ReactDOM.render(
     <div>
         <div>
@@ -307,8 +442,12 @@ ReactDOM.render(
             <br></br>
             <br></br>
             <br></br>
-            <h1>表格</h1>
+            <h1>普通表格</h1>
             <Test6></Test6>
+            <h1>带斑马纹表格</h1>
+            <Test7></Test7>
+            <h1>带边框表格</h1>
+            <Test8></Test8>
         </div>
     </div>
     , document.body

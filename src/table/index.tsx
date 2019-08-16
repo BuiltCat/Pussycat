@@ -1,14 +1,16 @@
 import * as React from "react";
+import "./table.css"
+
 interface TableProps{
     data: Array<any>
     columns: Array<any>
+    stripe?: boolean
+    border?: boolean
 }
 
 export class Table extends React.Component<TableProps>{
     constructor(props: TableProps) {
         super(props)
-        console.log(this.props.columns)
-        console.log(this.props.data)
     }
     renderHeader(){
         let columns = this.props.columns
@@ -28,7 +30,7 @@ export class Table extends React.Component<TableProps>{
     }
     render() {
         return (
-            <table>
+            <table className={`cat-tables ${this.props.stripe?'stripe':''} ${this.props.border?'border':''}`}>
                 <thead>
                     <tr> 
                         {this.renderHeader()}
