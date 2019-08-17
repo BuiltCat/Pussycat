@@ -44,8 +44,8 @@ class Test extends React.Component<TestProps,TestState> {
     render() {
         return (
             <div>
-                <Radio value="1" stateValue={this.state.value}  onChange={this.onChange}>备选项1</Radio>
-                <Radio value="2" stateValue={this.state.value}  onChange={this.onChange}>备选项2</Radio>
+                <Radio value="1" stateValue={this.state.value}  onChange={this.onChange.bind(this)}>备选项1</Radio>
+                <Radio value="2" stateValue={this.state.value}  onChange={this.onChange.bind(this)}>备选项2</Radio>
             </div>
         )
     }
