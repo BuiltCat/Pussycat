@@ -1,6 +1,9 @@
-.cat-radio input{
-    vertical-align: middle;
-
+@keyframes radio{
+    from { background: #fff}
+    to { background: #409eff;  }
+}
+.cat-radio {
+    position: relative;
 }
 .cat-radio input:checked ~ span{
     color: #409eff;
@@ -13,4 +16,38 @@
 .cat-radio.disabled{
     cursor: not-allowed;
     color: #999;
+}
+.cat-radio .circle{
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #bfcbd9;
+}
+.cat-radio .circle.is-clicked{
+    animation: radio 0.5s;
+    border-color: #409eff;
+    background: #409eff;
+}
+.cat-radio .circle.is-clicked::before{
+    position: absolute;
+    content: "";
+    display: block;
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -4px;
+    margin-top: -4px;
+}
+.cat-radio input[type="radio"]{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    left: 0;
+    opacity: 0;
 }

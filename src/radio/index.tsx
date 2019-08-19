@@ -20,6 +20,7 @@ class Radio extends React.Component<RadioProps>{
     render() {
         return (
             <label className={ `cat-radio ${this.props.disabled?'disabled':''}` }>
+                <span className={`circle ${this.props.value === this.props.stateValue?"is-clicked":""}`}></span>
                 <input checked = { this.props.value === this.props.stateValue } onChange={this.onChange.bind(this)} disabled={this.props.disabled} type="radio"/>
                 <span>{this.props.children}</span>
             </label>

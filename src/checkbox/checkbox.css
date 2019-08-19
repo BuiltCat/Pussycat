@@ -1,7 +1,38 @@
-.cat-checkbox input{
-    vertical-align: middle;
+.cat-checkbox{
+    position: relative;
+    cursor: pointer;
+}
+.cat-checkbox.disabled{
+    cursor: not-allowed;
+    color: #999;
+}
+.cat-checkbox input[type="checkbox"]{
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+.cat-checkbox .square{
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    border: 1px solid #bfcbd9;
+    margin-right: 5px;
+}
+.cat-checkbox .square.is-clicked{
+    animation: radio 0.5s;
+    border-color: #409eff;
+    background: #409eff;
+}
+.cat-checkbox .square.is-clicked::before{
+    animation: radio 0.5s;
+    content: "\e885";
+    color: #fff;
+    font-size: 18px;
 }
 .cat-checkbox span{
     vertical-align: middle;
     height: 100%;
+    font-weight: 900;
 }

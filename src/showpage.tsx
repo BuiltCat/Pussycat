@@ -6,6 +6,7 @@ import { Button } from "./button"
 import { Radio,RadioGroup } from "./radio"
 import { Menu, SubMenu,MenuItem } from "./menu"
 import  { Table }  from "./table"
+import { CheckBox,CheckBoxGroup } from "./checkbox"
 import "./font/iconfont.css"
 import "./index.css"
 
@@ -328,6 +329,54 @@ class Test8 extends React.Component<TestProps,TestState6> {
           )
     }
 }
+class Test9 extends React.Component {
+  render() {
+      return (
+        <CheckBox clicked>
+          备选项
+        </CheckBox>
+        )
+  }
+}
+class Test10 extends React.Component {
+  render() {
+      return (
+        <div>
+          <CheckBox clicked disabled>
+            备选项1
+          </CheckBox>
+          <CheckBox disabled>
+            备选项2
+          </CheckBox>
+        </div>
+        )
+  }
+}
+interface Test11State{
+  checkList: Array<string>
+}
+class Test11 extends React.Component<{},Test11State>{
+  constructor(props: any){
+    super(props)
+    this.state = {
+      checkList: ['复选框 A', '选中且禁用']
+    }
+  }
+  render() {
+    return (
+      <CheckBoxGroup value={this.state.checkList} onChange={this.onChange}>
+        <CheckBox label="复选框 A"></CheckBox>
+        <CheckBox label="复选框 B"></CheckBox>
+        <CheckBox label="复选框 C"></CheckBox>
+        <CheckBox label="禁用" disabled></CheckBox>
+        <CheckBox label="选中且禁用" disabled></CheckBox>
+      </CheckBoxGroup>
+    )
+  }
+  onChange(value:any){
+    console.log(value)
+  }
+}
 ReactDOM.render(
     <div>
         <div>
@@ -448,6 +497,12 @@ ReactDOM.render(
             <Test7></Test7>
             <h1>带边框表格</h1>
             <Test8></Test8>
+            <h1>多选框</h1>
+            <Test9></Test9>
+            <h1>禁用多选框</h1>
+            <Test10></Test10>
+            <h1>多选框组</h1>
+            <Test11></Test11>
         </div>
     </div>
     , document.body
