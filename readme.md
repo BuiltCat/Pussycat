@@ -4,7 +4,7 @@
 ##### Button 按钮（已完成）
 #### From
 ##### Radio 单选框（已完成）
-##### Checkbox 多选框（未完成）
+##### Checkbox 多选框（已完成）
 ##### Input 输入框（未完成）
 ##### Input Number 数字输入框（未完成）
 ##### Select 选择器（未完成）
