@@ -7,6 +7,7 @@ import { Radio,RadioGroup } from "./radio"
 import { Menu, SubMenu,MenuItem } from "./menu"
 import  { Table }  from "./table"
 import { CheckBox,CheckBoxGroup } from "./checkbox"
+import { Input } from "./input"
 import "./font/iconfont.css"
 import "./index.css"
 
@@ -503,6 +504,19 @@ ReactDOM.render(
             <Test10></Test10>
             <h1>多选框组</h1>
             <Test11></Test11>
+            <h1>输入框</h1>
+            <Input></Input>
+            <h1>placeholder输入框</h1>
+            <Input placeholder="请输入内容"></Input>
+            <h1>禁用输入框</h1>
+            <Input disabled placeholder="请输入内容"></Input>
+            <h1>图标输入框</h1>
+            <Input icon="cat-fire" placeholder="请输入内容"></Input>
+            <h1>图标尺寸</h1>
+            <Input placeholder="请输入内容" size="large" />
+            <Input placeholder="请输入内容" />
+            <Input placeholder="请输入内容" size="small" />
+            <Input placeholder="请输入内容" size="mini" />
         </div>
     </div>
     , document.body

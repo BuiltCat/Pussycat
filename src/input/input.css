@@ -1,0 +1,44 @@
+.cat-input{
+    position: relative;
+    display: inline-block;
+    width: 180px;
+}
+.cat-input.disabled input{
+    background-color: #eef1f6;
+    border-color: #d1dbe5;
+    color: #bbb;
+    cursor: not-allowed;
+}
+.cat-input input{
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #bfcbd9;
+    height: 36px;
+    padding: 3px 10px;
+    outline: 0;
+    transition: border-color .4s;
+    line-height: 1;
+    font-size: inherit;
+    width: 100%;
+}
+.cat-input.mini input{
+    height: 22px;
+}
+.cat-input.small input{
+    height: 30px;
+}
+.cat-input.large input{
+    height: 42px;
+}
+.cat-input input:focus{
+    border-color:#22A0FF;
+}
+.cat-input i.catfont {
+    position: absolute;
+    font-size: 1.2em;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bfcbd9;
+}
