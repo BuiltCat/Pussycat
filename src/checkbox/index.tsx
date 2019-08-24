@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./checkbox.css";
-import { string, array } from "prop-types";
+
 interface CheckBoxProps{
     clicked?:boolean
     disabled?:boolean

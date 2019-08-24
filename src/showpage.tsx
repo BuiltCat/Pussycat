@@ -8,6 +8,7 @@ import { Menu, SubMenu,MenuItem } from "./menu"
 import  { Table }  from "./table"
 import { CheckBox,CheckBoxGroup } from "./checkbox"
 import { Input } from "./input"
+import { Select } from "./select"
 import "./font/iconfont.css"
 import "./index.css"
 
@@ -378,6 +379,37 @@ class Test11 extends React.Component<{},Test11State>{
     console.log(value)
   }
 }
+class Text12 extends React.Component<any,any>{
+  constructor(props:any){
+    super(props)
+    
+  this.state = {
+    options: [{
+      value: '选项1',
+      label: '黄金糕'
+    }, {
+      value: '选项2',
+      label: '双皮奶'
+    }, {
+      value: '选项3',
+      label: '蚵仔煎'
+    }, {
+      value: '选项4',
+      label: '龙须面'
+    }, {
+      value: '选项5',
+      label: '北京烤鸭'
+    }],
+    value: ''
+  };
+}
+render() {
+  return (
+      <Select options={this.state.options} placeholder="请选择"></Select>
+    )  
+  }
+
+}
 ReactDOM.render(
     <div>
         <div>
@@ -512,11 +544,13 @@ ReactDOM.render(
             <Input disabled placeholder="请输入内容"></Input>
             <h1>图标输入框</h1>
             <Input icon="cat-fire" placeholder="请输入内容"></Input>
-            <h1>图标尺寸</h1>
+            <h1>输入框尺寸</h1>
             <Input placeholder="请输入内容" size="large" />
             <Input placeholder="请输入内容" />
             <Input placeholder="请输入内容" size="small" />
             <Input placeholder="请输入内容" size="mini" />
+            <h1>选择器</h1>
+            <Text12></Text12>
         </div>
     </div>
     , document.body
