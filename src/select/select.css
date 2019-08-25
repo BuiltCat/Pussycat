@@ -1,7 +1,26 @@
+@keyframes selectOpen{
+    from { transform: rotate(0deg);}
+    to { transform: rotate(180deg);}
+}
+@keyframes selectClose{
+    from { transform: rotate(180deg);}
+    to { transform: rotate(0deg);}
+}
 .cat-select {
     position: relative;
     display: inline-block;
-    width: 180px;
+    width: 240px;
+    cursor: pointer;
+}
+.cat-select.disabled{
+    cursor: not-allowed;
+    background-color: #eef1f6;
+    border-color: #d1dbe5;
+    color: #bbb;
+    cursor: not-allowed;
+}
+.cat-select::before{
+    content: "" !important
 }
 .cat-select .select{
     display: inline-block;
@@ -17,13 +36,28 @@
     font-size: inherit;
     width: 100%;
 }
-.cat-select .select-option{
+.cat-select .select .catfont{
+    position: absolute;
+    right: 20px;
+}
+.cat-select .select~.select-option{
+    display: none;
+}
+.cat-select .select.open~.select-option{
+    display: block;
     border-radius: 4px;
     background: #fff;
     border: 1px solid #bfcbd9;
     list-style: none;
     margin: 0;
     padding: 10px 0;
+}
+.cat-select .select .catfont{
+    animation: selectClose 0.4s;
+}
+.cat-select .select .catfont.open{
+    animation: selectOpen 0.4s;
+    transform: rotate(180deg)
 }
 .cat-select .select-option .option{
     box-sizing: border-box;

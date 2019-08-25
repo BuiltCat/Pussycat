@@ -398,17 +398,20 @@ class Text12 extends React.Component<any,any>{
       label: '龙须面'
     }, {
       value: '选项5',
-      label: '北京烤鸭'
+      label: '北京烤鸭',
+      disabled: true
     }],
     value: ''
   };
 }
 render() {
   return (
-      <Select options={this.state.options} placeholder="请选择"></Select>
+      <Select disabled onChange={this.onChange} options={this.state.options} placeholder="请选择"></Select>
     )  
   }
-
+onChange=(object: {}) =>{
+  console.log(object)
+}
 }
 ReactDOM.render(
     <div>
