@@ -9,6 +9,8 @@ import  { Table }  from "./table"
 import { CheckBox,CheckBoxGroup } from "./checkbox"
 import { Input } from "./input"
 import { Select } from "./select"
+import { Tag } from "./tag"
+import { Progress } from "./progress"
 import "./font/iconfont.css"
 import "./index.css"
 
@@ -413,6 +415,23 @@ onChange=(object: {}) =>{
   console.log(object)
 }
 }
+class Text13 extends React.Component{
+  onClose=()=>{
+    console.log(1)
+  }
+  render(){
+    return (
+      <div>
+        <Tag onClose={this.onClose} closed>标签1</Tag>
+        <Tag onClose={this.onClose}  closed type="primary">标签2</Tag>
+        <Tag onClose={this.onClose}  closed type="success">标签3</Tag>
+        <Tag onClose={this.onClose}  closed type="info">标签4</Tag>
+        <Tag onClose={this.onClose}  closed type="warning">标签5</Tag>
+        <Tag onClose={this.onClose}  closed type="danger">标签6</Tag>
+      </div>
+    )
+  }
+}
 ReactDOM.render(
     <div>
         <div>
@@ -554,6 +573,17 @@ ReactDOM.render(
             <Input placeholder="请输入内容" size="mini" />
             <h1>选择器</h1>
             <Text12></Text12>
+            <h1>标签</h1>
+            <Tag>标签1</Tag>
+            <Tag type="primary">标签2</Tag>
+            <Tag type="success">标签3</Tag>
+            <Tag type="info">标签4</Tag>
+            <Tag type="warning">标签5</Tag>
+            <Tag type="danger">标签6</Tag>
+            <h1>可关闭标签</h1>
+            <Text13></Text13>
+            <h1> 进度条</h1>
+            <Progress percentage={19}></Progress>
         </div>
     </div>
     , document.body

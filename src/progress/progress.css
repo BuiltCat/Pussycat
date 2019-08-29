@@ -1,0 +1,18 @@
+.cat-progress {
+    font-size: 14px;
+}
+.cat-progress .progress-bar{
+    position: relative;
+    display: inline-block;
+    height: 10px;
+    width: 350px;
+    background-color: #e4e8f1;
+    border-radius: 100px;
+    margin-right: 5px;
+}
+.cat-progress .progress-inner{
+    position: absolute;
+    background-color: #20a0ff;
+    height: 10px;
+    border-radius: 100px;
+}

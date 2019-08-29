@@ -9,7 +9,7 @@
 ##### Select 选择器（已完成）
 #### Data
 ##### Table 表格（完成部分）
-##### Tag 标签（未完成）
+##### Tag 标签（已完成）
 ##### Progress 进度条（未完成）
 ##### Pagination 分页（未完成）
 #### Notice 

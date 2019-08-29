@@ -1,0 +1,47 @@
+.cat-tag{
+    display: inline-block;
+    background-color: #e4e8f1;
+    padding: 0 5px;
+    height: 24px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #48576a;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+.cat-tag .catfont{
+    cursor: pointer;
+    padding: 0 2px;
+}
+.cat-tag .catfont:hover{
+    opacity: 0.5;
+}
+.cat-tag::before{
+    content: ""!important
+}
+.cat-tag.primary{
+    color: #409eff;
+    background: #ecf5ff;
+    border-color: #b3d8ff;
+}
+.cat-tag.success{
+  color: #67c23a;
+  background: #f0f9eb;
+  border-color: #c2e7b0;
+}
+.cat-tag.info{
+  color: #909399;
+  background: #f4f4f5;
+  border-color: #d3d4d6;
+}
+.cat-tag.warning{
+    color: #e6a23c;
+    background: #fdf6ec;
+    border-color: #f5dab1;
+}
+.cat-tag.cat-tag.danger{
+  color: #f56c6c;
+  background: #fef0f0;
+  border-color: #fbc4c4;
+}
