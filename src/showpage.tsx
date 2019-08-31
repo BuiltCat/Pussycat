@@ -583,7 +583,14 @@ ReactDOM.render(
             <h1>可关闭标签</h1>
             <Text13></Text13>
             <h1> 进度条</h1>
-            <Progress percentage={19}></Progress>
+            <Progress percentage={0} />
+            <Progress percentage={70} />
+            <Progress percentage={100}  status="success" />
+            <Progress percentage={50} status="exception" />
+            <Progress percentage={0}  textInside/>
+            <Progress percentage={70}  textInside/>
+            <Progress percentage={100}  textInside status="success" />
+            <Progress percentage={50} strokeWidth={30} textInside status="exception" />
         </div>
     </div>
     , document.body

@@ -10,7 +10,7 @@
 #### Data
 ##### Table 表格（完成部分）
 ##### Tag 标签（已完成）
-##### Progress 进度条（未完成）
+##### Progress 进度条（已完成）
 ##### Pagination 分页（未完成）
 #### Notice 
 ##### Alert 警告（未完成）

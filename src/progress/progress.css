@@ -1,18 +1,37 @@
 .cat-progress {
     font-size: 14px;
 }
-.cat-progress .progress-bar{
+.cat-progress{
     position: relative;
     display: inline-block;
     height: 10px;
     width: 350px;
     background-color: #e4e8f1;
     border-radius: 100px;
-    margin-right: 5px;
+}
+.cat-progress.text-inside{
+    height: 18px;
+    color: #fff;
+}
+.cat-progress.text-inside .progress-inner{
+    height: 18px;
 }
 .cat-progress .progress-inner{
     position: absolute;
     background-color: #20a0ff;
     height: 10px;
     border-radius: 100px;
+    text-align: right;
+}
+.cat-progress .progress-inner.success{
+    background-color: #67c23a;
+}
+.cat-progress .progress-inner.exception{
+    background-color: #f56c6c;
+}
+.cat-progress .progress-number{
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 5px;
 }
