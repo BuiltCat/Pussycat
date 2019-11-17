@@ -1,0 +1,12 @@
+.cat-layout-row{
+
+}
+.cat-layout-row::after{
+    display: block;
+    clear: both;
+    content: "";
+}
+.cat-layout-col{
+    box-sizing: border-box;
+    float: left;
+}

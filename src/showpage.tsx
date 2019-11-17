@@ -13,6 +13,7 @@ import { Tag } from "./tag"
 import { Progress } from "./progress"
 import "./font/iconfont.css"
 import "./index.css"
+import { LayoutCol, LayoutRow } from "./layout"
 
 const fn = function () {
     console.log(1);
@@ -591,6 +592,11 @@ ReactDOM.render(
             <Progress percentage={70}  textInside/>
             <Progress percentage={100}  textInside status="success" />
             <Progress percentage={50} strokeWidth={30} textInside status="exception" />
+            <LayoutRow gutter={20}>
+                <LayoutCol span={8}>1</LayoutCol>
+                <LayoutCol offset={8} span={8}>2</LayoutCol>
+            </LayoutRow>
+
         </div>
     </div>
     , document.body

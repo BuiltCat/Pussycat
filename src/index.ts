@@ -5,6 +5,8 @@ import {CheckBox,CheckBoxGroup} from "./checkbox";
 import { Menu, MenuItem, SubMenu } from "./menu";
 import { Input } from "./input"
 import { Select } from "./select"
+import { Tag } from "./tag"
+import { LayoutRow, LayoutCol } from "./layout"
 import "./font/iconfont.css";
 
 export{
@@ -18,5 +20,8 @@ export{
     MenuItem,
     SubMenu,
     Input,
-    Select
+    Select,
+    Tag,
+    LayoutCol,
+    LayoutRow
 }
