@@ -38,7 +38,11 @@ export class Select extends React.Component<SelectProps,SelectState>{
     renderElement = () => {
         const value = this.state.value
         return this.props.options.map(o => {
+            if(o.disabled){
+                return <li key={o.value} className={`option disabled ${value===o.value?'active':''}`} value={ o.value }>{o.label}</li>
+            }
             return <li key={o.value} onClick={this.clickOption(o.value, o.label)} className={`option ${value===o.value?'active':''}`} value={ o.value }>{o.label}</li>
+            
         })
     }
     render (){

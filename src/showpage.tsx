@@ -409,7 +409,7 @@ class Text12 extends React.Component<any,any>{
 }
 render() {
   return (
-      <Select disabled onChange={this.onChange} options={this.state.options} placeholder="请选择"></Select>
+      <Select onChange={this.onChange} options={this.state.options} placeholder="请选择"></Select>
     )  
   }
 onChange=(object: {}) =>{

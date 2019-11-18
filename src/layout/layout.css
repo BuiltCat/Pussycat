@@ -1,5 +1,6 @@
 .cat-layout-row{
-
+    display: table;
+    width: 100%;
 }
 .cat-layout-row::after{
     display: block;

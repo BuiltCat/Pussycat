@@ -37,7 +37,7 @@ class LayoutCol extends React.Component<LayoutColProps>{
         const style = {
             width: `${(this.props.span/24)*100}%`,
             marginLeft:  `${(this.props.offset/24)*100}%`,
-            padding: this.props.gutter?`0 ${this.props.gutter}px`:0
+            padding: this.props.gutter?`0 ${this.props.gutter/2}px`:0
         }
         return (
             <div className="cat-layout-col" style={style}>
