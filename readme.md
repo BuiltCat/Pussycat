@@ -14,7 +14,7 @@
 ##### Pagination 分页（未完成）
 #### Notice 
 ##### Alert 警告（未完成）
-##### Loading 加载（未完成）
+##### Loading 加载（已完成）
 ##### Notification 通知（未完成）
 ##### Message box 信息提示（未完成）
 #### Nav

@@ -8,6 +8,7 @@ import { Select } from "./select"
 import { Tag } from "./tag"
 import { LayoutRow, LayoutCol } from "./layout"
 import { Progress } from "./progress"
+import { Loading } from "./loading"
 import "./font/iconfont.css";
 
 export{
@@ -25,5 +26,6 @@ export{
     Tag,
     Progress,
     LayoutCol,
-    LayoutRow
+    LayoutRow,
+    Loading
 }

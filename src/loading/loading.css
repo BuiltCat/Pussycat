@@ -1,0 +1,77 @@
+@keyframes loading{
+    from { transform: rotate(360deg); }
+    to { transform:  rotate(0);}
+}
+.cat-loading{
+    position: relative;
+}
+.cat-loading .cat-loading-div{
+    position: absolute;
+    z-index: 200;
+    background: rgba(255, 255, 255, 0.9);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+.cat-loading .cat-loading-text{
+    position: absolute;
+    z-index: 400;
+    color: #20a0ff;
+    top: calc(50% + 40px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    
+}
+.cat-loading::before{
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    content: "\e611";
+    z-index: 300;
+    color: #20a0ff;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    font-size: 36px;
+    animation: loading 2s linear 0s infinite normal;
+}
+body.cat-loading{
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+}
+body.cat-loading .cat-loading-full{
+    position: fixed;
+    z-index: 700;
+    background: rgba(255, 255, 255, 0.9);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+body.cat-loading .cat-loading-full::before{
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    content: "\e611";
+    z-index: 300;
+    color: #20a0ff;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    font-size: 36px;
+    animation: loading 2s linear 0s infinite normal;
+}
+body.cat-loading .cat-loading-text{
+    z-index: 700;
+}
+body.cat-loading::before{
+    display: none;
+}

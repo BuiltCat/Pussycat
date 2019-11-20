@@ -14,6 +14,7 @@ import { Progress } from "./progress"
 import "./font/iconfont.css"
 import "./index.css"
 import { LayoutCol, LayoutRow } from "./layout"
+import { Loading } from "./loading"
 
 const fn = function () {
     console.log(1);
@@ -189,12 +190,14 @@ class Test6 extends React.Component<TestProps,TestState6> {
       }
     render() {
         return (
+          <Loading  text="记载说" fullscreen>
             <Table
             //   style={{width: '100%'}}
               columns={this.state.columns}
             //   maxHeight={200}
               data={this.state.data}
             />
+          </Loading>
           )
     }
 }
